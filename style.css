@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  width: 340px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.display {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #39ff14;
+  font-size: 2.2rem;
+  text-align: right;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  height: 70px;
+  box-shadow: inset 0 0 10px #000;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+button {
+  padding: 18px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+  background: linear-gradient(145deg, #4b4b4b, #3a3a3a);
+  transform: scale(1.05);
+}
+
+.operator {
+  background: linear-gradient(145deg, #ffae42, #ff9500);
+  color: white;
+}
+
+.equal {
+  background: linear-gradient(145deg, #34d058, #28a745);
+  grid-column: span 2;
+  color: white;
+}
+
+.clear {
+  background: linear-gradient(145deg, #f25a6d, #dc3545);
+}
+
+/* History Section */
+.history-container {
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.history-container h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #00ffcc;
+}
+
+#history {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#history li {
+  margin: 5px 0;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.clear-history-btn {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  background: linear-gradient(145deg, #ff6b6b, #dc3545);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.clear-history-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #ff7f7f, #c82333);
+}
